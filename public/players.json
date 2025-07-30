@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Virat Kohli",
+    "country": "India",
+    "expertise": "Batsman",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Ben Stokes",
+    "country": "England",
+    "expertise": "All-Rounder",
+    "price": "$2000",
+    "battingStyle": "Left-handed"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Kagiso Rabada",
+    "country": "South Africa",
+    "expertise": "Bowler",
+    "price": "$2000",
+    "battingStyle": "Left-handed"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "expertise": "Bowler",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "expertise": "Batsman",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "MS Dhoni",
+    "country": "India",
+    "expertise": "Wicket-Keeper",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Steve Smith",
+    "country": "Australia",
+    "expertise": "Batsman",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "expertise": "Bowler",
+    "price": "$2000",
+    "battingStyle": "Left-handed"
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "expertise": "All-Rounder",
+    "price": "$2000",
+    "battingStyle": "Right-handed"
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co/CsXqsZbH/player.jpg",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "expertise": "All-Rounder",
+    "price": "$2000",
+    "battingStyle": "Left-handed"
+  }
+]
