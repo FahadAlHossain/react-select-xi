@@ -2,10 +2,20 @@ import React, { useEffect } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa6";
 
-export default function Player({ player }) {
+export default function Player({ player, setCoin, coin }) {
   useEffect(() => {}, []);
 
+  
   const { img, name, country, expertise, price, battingStyle } = player;
+
+  const handlePlayer = () => {
+    if (coin >= price) {
+      alert("player added");
+       setCoin(coin - price);
+    } else {
+      alert("not enough coin");
+    }
+  };
   return (
     <div className="border-2 p-6 rounded-xl border-slate-300">
       <div className="">
@@ -31,8 +41,13 @@ export default function Player({ player }) {
         <p className="text-slate-400">{battingStyle}</p>
       </div>
       <div className="flex justify-between items-center">
-        <p className="font-semibold">Price: {price}</p>
-        <button className="border-2 p-2 border-slate-300">Choose Player</button>
+        <p className="font-semibold">Price: ${price}</p>
+        <button
+          onClick={handlePlayer}
+          className="border-2 p-2 border-slate-300"
+        >
+          Choose Player
+        </button>
       </div>
     </div>
   );

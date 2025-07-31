@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Player from "../Player/Player";
+import Selected from "../Selected/Selected";
 
-export default function Players() {
-  const [players, setPlayers] = useState([]);
-  const [available, setAvailable] = useState('available');
+export default function Players({ coin, setCoin }) {
+  //   const [players, setPlayers] = useState([]);
+  const [available, setAvailable] = useState("available");
   // const [selected, setSelected] = useState([])
   useEffect(() => {
-    fetch("../../public/players.json")
+    fetch("/public/players.json")
       .then((res) => res.json())
       .then((data) => setPlayers(data));
     //   handleAvailable();
   }, []);
-
+  const [players, setPlayers] = useState([]);
 
   return (
     <div>
@@ -21,25 +22,31 @@ export default function Players() {
         </div>
         <div className="border-2 p-2 border-slate-100 font-semibold rounded-xl">
           <button
-            onClick={() => setAvailable('available')}
-            className={available === 'available' && "bg-lime-300 p-4 rounded-xl"}
+            onClick={() => setAvailable("available")}
+            className={
+              available === "available" && "bg-lime-300 p-4 rounded-xl"
+            }
           >
             Available
           </button>
           <button
-            onClick={() => setAvailable('selected')}
-            className={available !== 'available' && "bg-lime-300 p-4 rounded-xl"}
+            onClick={() => setAvailable("selected")}
+            className={
+              available !== "available" && "bg-lime-300 p-4 rounded-xl"
+            }
           >
             Selected
           </button>
         </div>
       </div>
-      {available === 'available' && (
+      {available === "available" ? (
         <div className="grid grid-cols-3 gap-4">
           {players.map((player) => (
-            <Player key={player.id} player={player}></Player>
+            <Player key={player.id} coin={coin} setCoin={setCoin} player={player}></Player>
           ))}
         </div>
+      ) : (
+        <Selected coin={coin}></Selected>
       )}
     </div>
   );

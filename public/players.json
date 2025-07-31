@@ -5,7 +5,7 @@
     "name": "Virat Kohli",
     "country": "India",
     "expertise": "Batsman",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -14,7 +14,7 @@
     "name": "Ben Stokes",
     "country": "England",
     "expertise": "All-Rounder",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Left-handed"
   },
   {
@@ -23,7 +23,7 @@
     "name": "Kagiso Rabada",
     "country": "South Africa",
     "expertise": "Bowler",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Left-handed"
   },
   {
@@ -32,7 +32,7 @@
     "name": "Rashid Khan",
     "country": "Afghanistan",
     "expertise": "Bowler",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -41,7 +41,7 @@
     "name": "Babar Azam",
     "country": "Pakistan",
     "expertise": "Batsman",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -50,7 +50,7 @@
     "name": "MS Dhoni",
     "country": "India",
     "expertise": "Wicket-Keeper",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -59,7 +59,7 @@
     "name": "Steve Smith",
     "country": "Australia",
     "expertise": "Batsman",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -68,7 +68,7 @@
     "name": "Trent Boult",
     "country": "New Zealand",
     "expertise": "Bowler",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Left-handed"
   },
   {
@@ -77,7 +77,7 @@
     "name": "Andre Russell",
     "country": "West Indies",
     "expertise": "All-Rounder",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Right-handed"
   },
   {
@@ -86,7 +86,7 @@
     "name": "Shakib Al Hasan",
     "country": "Bangladesh",
     "expertise": "All-Rounder",
-    "price": "$2000",
+    "price": 2000,
     "battingStyle": "Left-handed"
   }
 ]
