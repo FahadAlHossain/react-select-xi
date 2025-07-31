@@ -2,22 +2,32 @@ import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa6";
 
-export default function Player({ player, setCoin, coin, newPlayer, setNewPlayer }) {
-  const { img, name, country, expertise, price, battingStyle } = player;
-  
-    // const [newPlayer, setNewPlayer] = useState([]);
-    // console.log(newPlayer)
-  const handlePlayer = (addPlayer) => {
-    if (coin >= price) {
-      alert("player added");
-      setCoin(coin - price);
-      const setPlayer = [...newPlayer,addPlayer];
-      setNewPlayer(setPlayer);
-    //   console.log(addPlayer);
+export default function Player({
+  player,
+  setCoin,
+  coin,
+  newPlayer,
+  setNewPlayer,
+}) {
+  const { id, img, name, country, expertise, price, battingStyle } = player;
+
+  const handlePlayer = (addPlayer, id) => {
+  if (coin >= price) {
+    const alreadyExists = newPlayer.some(player => player.id === id);
+    
+    if (alreadyExists) {
+      alert("Player already exists");
     } else {
-      alert("not enough coin");
+      alert("Player added");
+      setCoin(coin - price);
+      const setPlayer = [...newPlayer, addPlayer];
+      setNewPlayer(setPlayer);
     }
-  };
+  } else {
+    alert("Not enough coin");
+  }
+};
+
   return (
     <div className="border-2 p-6 rounded-xl border-slate-300">
       <div className="">
@@ -45,7 +55,7 @@ export default function Player({ player, setCoin, coin, newPlayer, setNewPlayer 
       <div className="flex justify-between items-center">
         <p className="font-semibold">Price: ${price}</p>
         <button
-          onClick={()=>handlePlayer(player)}
+          onClick={() => handlePlayer(player, id)}
           className="border-2 p-2 border-slate-300"
         >
           Choose Player

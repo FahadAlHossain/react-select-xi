@@ -19,7 +19,11 @@ export default function Players({ coin, setCoin }) {
     <div>
       <div className="flex justify-between mt-[720px] mb-5">
         <div>
-          <h2 className="text-3xl font-bold">Available Players</h2>
+          {available === "available" ? (
+            <h2 className="text-3xl font-bold">Available Players</h2>
+          ) : (
+            <h2 className="text-3xl font-bold">Selected Players</h2>
+          )}
         </div>
         <div className="border-2 p-2 border-slate-100 font-semibold rounded-xl">
           <button
