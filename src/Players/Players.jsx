@@ -6,13 +6,14 @@ export default function Players({ coin, setCoin }) {
   //   const [players, setPlayers] = useState([]);
   const [available, setAvailable] = useState("available");
   // const [selected, setSelected] = useState([])
+  const [players, setPlayers] = useState([]);
+  const [newPlayer, setNewPlayer] = useState([]);
   useEffect(() => {
     fetch("/public/players.json")
       .then((res) => res.json())
       .then((data) => setPlayers(data));
     //   handleAvailable();
   }, []);
-  const [players, setPlayers] = useState([]);
 
   return (
     <div>
@@ -42,11 +43,18 @@ export default function Players({ coin, setCoin }) {
       {available === "available" ? (
         <div className="grid grid-cols-3 gap-4">
           {players.map((player) => (
-            <Player key={player.id} coin={coin} setCoin={setCoin} player={player}></Player>
+            <Player
+              key={player.id}
+              coin={coin}
+              setCoin={setCoin}
+              player={player}
+              newPlayer={newPlayer}
+              setNewPlayer={setNewPlayer}
+            ></Player>
           ))}
         </div>
       ) : (
-        <Selected coin={coin}></Selected>
+        <Selected newPlayer={newPlayer}></Selected>
       )}
     </div>
   );

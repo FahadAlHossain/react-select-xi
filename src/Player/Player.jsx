@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa6";
 
-export default function Player({ player, setCoin, coin }) {
-  useEffect(() => {}, []);
-
-  
+export default function Player({ player, setCoin, coin, newPlayer, setNewPlayer }) {
   const { img, name, country, expertise, price, battingStyle } = player;
-
-  const handlePlayer = () => {
+  
+    // const [newPlayer, setNewPlayer] = useState([]);
+    // console.log(newPlayer)
+  const handlePlayer = (addPlayer) => {
     if (coin >= price) {
       alert("player added");
-       setCoin(coin - price);
+      setCoin(coin - price);
+      const setPlayer = [...newPlayer,addPlayer];
+      setNewPlayer(setPlayer);
+    //   console.log(addPlayer);
     } else {
       alert("not enough coin");
     }
@@ -43,7 +45,7 @@ export default function Player({ player, setCoin, coin }) {
       <div className="flex justify-between items-center">
         <p className="font-semibold">Price: ${price}</p>
         <button
-          onClick={handlePlayer}
+          onClick={()=>handlePlayer(player)}
           className="border-2 p-2 border-slate-300"
         >
           Choose Player
