@@ -58,7 +58,7 @@ export default function Players({ coin, setCoin }) {
           ))}
         </div>
       ) : (
-        <Selected newPlayer={newPlayer}></Selected>
+        <Selected newPlayer={newPlayer} setNewPlayer={setNewPlayer}></Selected>
       )}
     </div>
   );
