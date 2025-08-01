@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './Navbar/Navbar'
 import Banner from './Banner/Banner'
 import Players from './Players/Players';
+import Subscribe from './Subscribe/Subscribe';
 
 function App() {
   const [coin, setCoin] = useState(0);
@@ -9,13 +10,6 @@ function App() {
   const handleCoin = () => {
     setCoin(coin + 5000);
   }
-  // const handlePlayer = () => {
-  //   if (coin >= 5000) {
-  //     alert("player added");
-  //   } else {
-  //     alert("not enough coin");
-  //   }
-  // };
 
 
   return (
@@ -24,6 +18,7 @@ function App() {
         <Navbar coin={coin}></Navbar>
         <Banner handleCoin={handleCoin}></Banner>
         <Players coin={coin} setCoin={setCoin}></Players>
+        <Subscribe></Subscribe>
       </div>
     </>
   )
