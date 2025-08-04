@@ -5,11 +5,11 @@ export default function AddPlayer({ addPlayer, setNewPlayer, newPlayer }) {
   const { id, img, name, battingStyle } = addPlayer;
 
   const handleRemove = (id) => {
-    const removePlayer = newPlayer.filter(item => item.id !== id);
+    const removePlayer = newPlayer.filter((item) => item.id !== id);
     setNewPlayer(removePlayer);
-    console.log(removePlayer)
-  }
-  
+    console.log(removePlayer);
+  };
+
   return (
     <div>
       <div className="flex border-2 rounded-xl border-slate-300 p-2 justify-between items-center my-4">
@@ -23,7 +23,10 @@ export default function AddPlayer({ addPlayer, setNewPlayer, newPlayer }) {
           </div>
         </div>
         <div>
-          <button onClick={()=> handleRemove(id)} className="text-red-500 text-lg">
+          <button
+            onClick={() => handleRemove(id)}
+            className="text-red-500 text-lg"
+          >
             <ImBin />
           </button>
         </div>

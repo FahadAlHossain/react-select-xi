@@ -12,21 +12,21 @@ export default function Player({
   const { id, img, name, country, expertise, price, battingStyle } = player;
 
   const handlePlayer = (addPlayer, id) => {
-  if (coin >= price) {
-    const alreadyExists = newPlayer.some(player => player.id === id);
-    
-    if (alreadyExists) {
-      alert("Player already exists");
+    if (coin >= price) {
+      const alreadyExists = newPlayer.some((player) => player.id === id);
+
+      if (alreadyExists) {
+        alert("Player already exists");
+      } else {
+        alert("Player added");
+        setCoin(coin - price);
+        const setPlayer = [...newPlayer, addPlayer];
+        setNewPlayer(setPlayer);
+      }
     } else {
-      alert("Player added");
-      setCoin(coin - price);
-      const setPlayer = [...newPlayer, addPlayer];
-      setNewPlayer(setPlayer);
+      alert("Not enough coin");
     }
-  } else {
-    alert("Not enough coin");
-  }
-};
+  };
 
   return (
     <div className="border-2 p-6 rounded-xl border-slate-300">

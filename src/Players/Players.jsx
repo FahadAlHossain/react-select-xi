@@ -3,9 +3,7 @@ import Player from "../Player/Player";
 import Selected from "../Selected/Selected";
 
 export default function Players({ coin, setCoin }) {
-  //   const [players, setPlayers] = useState([]);
   const [available, setAvailable] = useState("available");
-  // const [selected, setSelected] = useState([])
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState([]);
   useEffect(() => {
@@ -58,7 +56,7 @@ export default function Players({ coin, setCoin }) {
           ))}
         </div>
       ) : (
-        <Selected newPlayer={newPlayer} setNewPlayer={setNewPlayer}></Selected>
+        <Selected newPlayer={newPlayer} setAvailable={setAvailable} setNewPlayer={setNewPlayer}></Selected>
       )}
     </div>
   );
