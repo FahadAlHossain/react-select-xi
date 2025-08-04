@@ -31,7 +31,7 @@ export default function Player({
   return (
     <div className="border-2 p-6 rounded-xl border-slate-300">
       <div className="">
-        <img className="h-72 mx-auto rounded-xl" src={img} alt="" />
+        <img className="h-64 mx-auto rounded-xl" src={img} alt="" />
       </div>
       <h3 className="text-2xl font-semibold my-4 flex items-center gap-2">
         <FaUserCircle className="text-3xl" />

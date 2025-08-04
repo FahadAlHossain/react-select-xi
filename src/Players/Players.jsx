@@ -7,7 +7,7 @@ export default function Players({ coin, setCoin }) {
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState([]);
   useEffect(() => {
-    fetch("/public/players.json")
+    fetch("/players.json")
       .then((res) => res.json())
       .then((data) => setPlayers(data));
     //   handleAvailable();
